@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
+            "outputFile": "/home/rofiyanto/Downloads/PMJB/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\651c428cf248e9cb6e629169acaed733\\res\\values-en-rCA\\values.xml",
+                    "source": "/home/rofiyanto/.gradle/caches/transforms-1/files-1.1/play-services-wallet-11.0.4.aar/9c14c650ce39ccaedce9a52de7439d34/res/values-en-rCA/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

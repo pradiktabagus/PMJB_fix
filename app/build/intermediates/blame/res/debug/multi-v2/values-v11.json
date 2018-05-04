@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "/home/rofiyanto/Downloads/PMJB/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-appinvite-11.0.4.aar\\20187c9b612bab32718de0267a95f15f\\res\\values-v11\\values.xml",
+                    "source": "/home/rofiyanto/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-11.0.4.aar/010bc1dc8a9d013990f39dfdcd921619/res/values-v11/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\c94edf32c959ae11179d870ad2740e67\\res\\values-v11\\values-v11.xml",
+                    "source": "/home/rofiyanto/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/2439ca3a2efbcd76707622fb5a2adeaf/res/values-v11/values-v11.xml",
                     "from": {
                         "startLines": "2,8,14,20,26,32,38,39,43,47,48,52,56,57,61,66,71,76,78,80,81,82,136,191",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

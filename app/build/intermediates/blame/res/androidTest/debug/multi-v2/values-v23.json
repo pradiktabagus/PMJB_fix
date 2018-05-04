@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\pradiktabagus\\Downloads\\Programs\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\c94edf32c959ae11179d870ad2740e67\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\pradiktabagus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\cd70647f4be8a8002fc8513f5f30591b\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

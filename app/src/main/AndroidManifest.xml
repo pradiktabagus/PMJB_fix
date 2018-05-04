@@ -10,24 +10,28 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:largeHeap="true"
         android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher_pmjb"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_pmjb"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".SplashScreen"
             android:fitsSystemWindows="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,11 +39,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:fitsSystemWindows="true"></activity>
-        <activity android:name=".pengaduan.FormMengaduActivity"/>
-        <activity android:name=".aduan.AduanActivity"
-            android:fitsSystemWindows="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:fitsSystemWindows="true" />
+        <activity android:name=".pengaduan.FormMengaduActivity" />
+        <activity
+            android:name=".aduan.AduanActivity"
+            android:fitsSystemWindows="true" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -52,11 +58,19 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="  AIzaSyCzbGv8LPumJ9ltWhI2f1Bb_Ft-94QgHmQ  " />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
 
         <activity
             android:name=".pengaduan.maps.MapsActivity"
             android:fitsSystemWindows="true"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".profil.ProfilActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "/home/rofiyanto/Downloads/PMJB/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\c94edf32c959ae11179d870ad2740e67\\res\\values-v17\\values-v17.xml",
+                    "source": "/home/rofiyanto/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/2439ca3a2efbcd76707622fb5a2adeaf/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

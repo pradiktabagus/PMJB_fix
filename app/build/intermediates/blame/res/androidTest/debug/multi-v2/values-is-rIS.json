@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-is-rIS\\values-is-rIS.xml",
+            "outputFile": "C:\\Users\\pradiktabagus\\Downloads\\Programs\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-is-rIS\\values-is-rIS.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\c94edf32c959ae11179d870ad2740e67\\res\\values-is-rIS\\values-is-rIS.xml",
+                    "source": "C:\\Users\\pradiktabagus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\cd70647f4be8a8002fc8513f5f30591b\\res\\values-is-rIS\\values-is-rIS.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\4a916716935da44dc9189ee17c886328\\res\\values-is-rIS\\values-is-rIS.xml",
+                    "source": "C:\\Users\\pradiktabagus\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\042c08896a7325658c90e288b5334254\\res\\values-is-rIS\\values-is-rIS.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -17,33 +17,31 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import pengaduan.pmjb.aduan.AduanActivity;
 import pengaduan.pmjb.pengaduan.FormMengaduActivity;
 import pengaduan.pmjb.pengaduan.maps.MapsActivity;
+import pengaduan.pmjb.profil.ProfilActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private ImageView imageViewProfil;
-    private TextView textViewName, textViewMail;
     private CardView imageButtonLogout;
     Dialog dialog;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
+    final FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
     @Override
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
     TextView textView;
-    CardView imageButtonMengadu, imageButtonAduan;
+    CardView imageButtonMengadu, imageButtonAduan, imageButtonProfil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //profil
-        imageViewProfil = (ImageView)findViewById(R.id.profile_image);
-        textViewName = (TextView)findViewById(R.id.nama_profil);
-        textViewMail = (TextView)findViewById(R.id.mail_profil);
         //popup
         dialog = new Dialog(this);
         //font selamat datang
@@ -70,7 +68,16 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView)findViewById(R.id.keluar);
         Typeface quicksandlightkeluar = Typeface.createFromAsset(getAssets(),"font/Quicksand-Regular.otf");
         textView.setTypeface(quicksandlightkeluar);
-
+        //intent profil
+        imageButtonProfil = (CardView)findViewById(R.id.user);
+        imageButtonProfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,
+                        ProfilActivity.class);
+                startActivity(intent);
+            }
+        });
         //intent mengadu
         imageButtonMengadu = (CardView) findViewById(R.id.pengaduan);
         imageButtonMengadu.setOnClickListener(new View.OnClickListener() {
@@ -109,18 +116,5 @@ public class MainActivity extends AppCompatActivity {
                 mAuth.signOut();
             }
         });
-    }
-    public void ShowPopup(View view){
-        ImageButton imageButton;
-        dialog.setContentView(R.layout.popup_user);
-        imageButton = (ImageButton) dialog.findViewById(R.id.btn_close);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.show();
     }
 }

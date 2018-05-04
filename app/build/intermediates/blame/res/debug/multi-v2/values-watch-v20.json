@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "/home/rofiyanto/Downloads/PMJB/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.0.4.aar\\6c8a2dff67b5569e284cafb308eebb52\\res\\values-watch-v20\\values.xml",
+                    "source": "/home/rofiyanto/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.0.4.aar/5f11cdacbb7425eaf5c8d1514ba22c62/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

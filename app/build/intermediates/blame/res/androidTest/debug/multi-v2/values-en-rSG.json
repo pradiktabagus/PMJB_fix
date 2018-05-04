@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en-rSG\\values-en-rSG.xml",
+            "outputFile": "C:\\Users\\pradiktabagus\\Downloads\\Programs\\PMJB\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en-rSG\\values-en-rSG.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dikta\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\651c428cf248e9cb6e629169acaed733\\res\\values-en-rSG\\values.xml",
+                    "source": "C:\\Users\\pradiktabagus\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\2e2ef8d47c206c0d34585f43868dab94\\res\\values-en-rSG\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

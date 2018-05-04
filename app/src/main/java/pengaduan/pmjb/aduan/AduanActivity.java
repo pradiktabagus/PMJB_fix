@@ -1,26 +1,33 @@
 package pengaduan.pmjb.aduan;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import pengaduan.pmjb.ApiVolley;
 import pengaduan.pmjb.MainActivity;
 import pengaduan.pmjb.R;
 
 public class AduanActivity extends AppCompatActivity {
     ImageButton imageButtonBack;
+    Context context;
     private ProgressDialog progressDialog;
     private List<aduan>adlist = new ArrayList<aduan>();
     GridView grid;
@@ -30,6 +37,7 @@ public class AduanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aduan);
+        final FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
         grid = (GridView) findViewById(R.id.grid_list);
         adapter = new aduanAdapter(this, adlist);
         grid.setAdapter(adapter);
@@ -39,13 +47,59 @@ public class AduanActivity extends AppCompatActivity {
 
             }
         });
-        aduan s = new aduan();
-        s.setId_user("coba");
-        s.setImg("coba");
-        adlist.add(s);
-        s.setJudul("megumi");
-        s.setNama("coba");
-        adlist.add(s);
+        aduan ar= new aduan();
+
+        adlist.clear();
+        JSONObject json = new JSONObject();
+        String uid=currentFirebaseUser.getUid();
+        ApiVolley req = new ApiVolley(this, json, "GET", "http://192.168.88.3/adminpmjb/api/pengaduan/all_pengaduan/"+uid, "", "", 0, new ApiVolley.VolleyCallback() {
+            @Override
+            public void onSuccess(String result) {
+                Log.d("cekk",result.toString());
+                hideprogressDialog();
+                // Important Note : need to use try catch when parsing JSONObject, no need when parsing string
+
+                try {
+
+                    Log.d("cek","detail_lokasi");
+                    JSONObject responseAPI = new JSONObject(result);
+                    JSONArray arr = responseAPI.getJSONArray("response");
+                    String status = responseAPI.getJSONObject("metadata").getString("status");
+                    responseAPI = null;
+
+                    for(int i=0;i<arr.length();i++){
+                        Log.d("cek","detail_lokasi");
+                        JSONObject ar = arr.getJSONObject(i);
+                        Double lat=Double.parseDouble(ar.getString("latitude"));
+                        Double longi=Double.parseDouble(ar.getString("longtitude"));
+
+                        aduan a= new aduan();
+                        //a.setDetail_lokasi(ar.getString("detail_lokasi"));
+                        a.setLatitude(lat);
+                        a.setLongtitude(longi);
+                        a.setkondisi(ar.getInt("kondisi_jalan"));
+                        a.setStatus(ar.getInt("status"));
+                        a.setwaktu(ar.getString("tanggal"));
+                        a.setId_firebase(ar.getString("id_firebase"));
+                        a.setImg(ar.getString("img"));
+                        adlist.add(a);
+                    }
+                    //Log.d("cek isi",ar.getString("judul_acara"));
+
+                } catch (Exception e) {
+
+                    e.printStackTrace();
+//                    Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getActivity(), "Terjadi kesalahan saat memuat data", Toast.LENGTH_LONG).show();
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onError(String result) {
+                Log.d("cek","eror");
+            }
+        });
 
         //button back
         imageButtonBack = (ImageButton)findViewById(R.id.back_aduan);

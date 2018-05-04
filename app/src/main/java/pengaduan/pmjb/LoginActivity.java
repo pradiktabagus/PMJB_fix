@@ -47,9 +47,12 @@ public class LoginActivity extends AppCompatActivity {
         mGoogleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 signIn();
             }
         });
+
+
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override

@@ -1,7 +1,7 @@
-#Fri Nov 10 16:39:55 ICT 2017
-base.0=E\:\\PMJB\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\162
+#Wed Jan 17 21:36:03 KRAT 2018
+base.0=C\:\\Users\\pradiktabagus\\Downloads\\Programs\\PMJB\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\67
+path.1=classes2.dex
 renamed.1=classes2.dex
+path.0=classes.dex
 renamed.0=classes.dex
-file.1=E\:\\PMJB\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\162\\classes2.dex
-base.1=E\:\\PMJB\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\162
-file.0=E\:\\PMJB\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\162\\classes.dex
+base.1=C\:\\Users\\pradiktabagus\\Downloads\\Programs\\PMJB\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\67
